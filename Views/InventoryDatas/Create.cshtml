@@ -4,6 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
+    
 <h1>Create</h1>
 
 <h4>InventoryData</h4>
@@ -30,6 +31,11 @@
             <div class="form-group">
                 <label asp-for="GroupDataId" class="control-label"></label>
                 <select asp-for="GroupDataId" class ="form-control" asp-items="ViewBag.GroupDataId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warning_Count" class="control-label"></label>
+                <input asp-for="Warning_Count" class="form-control" />
+                <span asp-validation-for="Warning_Count" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

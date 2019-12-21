@@ -1,0 +1,14 @@
+﻿
+#search_bar{
+    width:70%;
+}
+#search_section {
+    width: auto;
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+}
+#search_bar, #search_btn {
+    display: inline-block;
+    margin: 1%;
+}

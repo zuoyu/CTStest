@@ -29,5 +29,9 @@ namespace hometest.Models
         [DisplayName("Group")]
         public Guid GroupDataId { get; set; }
         public GroupData GroupData { get; set; }
+
+        [Required]
+        [DisplayName("Warning")]
+        public int Warning_Count { get; set; }
     }
 }

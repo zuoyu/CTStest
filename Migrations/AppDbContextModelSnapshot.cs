@@ -52,6 +52,9 @@ namespace hometest.Migrations
                     b.Property<double>("Unit_Price")
                         .HasColumnType("float");
 
+                    b.Property<int>("Warning_Count")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("GroupDataId");
