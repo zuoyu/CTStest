@@ -18,26 +18,7 @@ namespace hometest.Controllers
         {
             _context = context;
         }
-        [HttpPost]
         
-        public async Task<JsonResult> CreateLiteEvent( [Bind("Id,Name,Count,Unit_Price,GroupDataId,Warning_Count")] InventoryData inventoryData)
-        {
-
-                    if (ModelState.IsValid)
-                    {
-                        _context.InventoryDatas.Add(inventoryData);
-                        await _context.SaveChangesAsync();
-                        return Json("Form Submitted");
-                    }
-                    else
-                    {
-                        var errors = string.Join("<br />", this.ModelState.Keys.SelectMany(key => this.ModelState[key].Errors).Select(s => s.ErrorMessage).ToArray());
-
-                        return Json(errors);
-                    }
-                
-
-        }
 
         [HttpPost]
  
@@ -72,7 +53,7 @@ namespace hometest.Controllers
                     var errors1 = string.Join("<br />", this.ModelState.Keys.SelectMany(key => this.ModelState[key].Errors).Select(s => s.ErrorMessage).ToArray());
                     return Json(errors1);
                 }
-                return Json("Form Submitted");
+                return Json("Form Updated");
             }
 
             var errors = string.Join("<br />", this.ModelState.Keys.SelectMany(key => this.ModelState[key].Errors).Select(s => s.ErrorMessage).ToArray());
